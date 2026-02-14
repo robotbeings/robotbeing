@@ -1,0 +1,38 @@
+[
+  {
+    "id": 10,
+    "created_at": "2026-02-13T16:08:58.966037+00:00",
+    "name": "Unitree G1 Humanoid Robot ",
+    "type": "Humanoid Robots",
+    "description": "Unitree G1 Humanoid Robot  is now available\n",
+    "image_url": "https://www.unitree.com/images/432cf5ea3e8a413497f6b92902feb6e8_1920x1080.jpg",
+    "sub_category": "Rental"
+  },
+  {
+    "id": 11,
+    "created_at": "2026-02-13T16:30:51.719022+00:00",
+    "name": "Unitree G1 Edu‑U5 Humanoid Robot",
+    "type": "Humanoid Robots",
+    "description": "Unitree G1 Edu‑U5 Humanoid Robot is Now available\n",
+    "image_url": "https://static.designboom.com/wp-content/uploads/2024/08/unitree-G1-humanoid-robot-mass-production-designboom-05.jpg",
+    "sub_category": "Rental"
+  },
+  {
+    "id": 12,
+    "created_at": "2026-02-13T16:32:15.140971+00:00",
+    "name": "Xpeng Iron Humanoid Robot",
+    "type": "Humanoid Robots",
+    "description": "Xpeng Iron Humanoid Robot is Now available",
+    "image_url": "https://www.maginative.com/content/images/size/w600/2024/11/XPeng-iron.jpg",
+    "sub_category": "Rental"
+  },
+  {
+    "id": 14,
+    "created_at": "2026-02-13T16:35:08.884466+00:00",
+    "name": "Milagrow RoboJulia Humanoid Robot",
+    "type": "Humanoid Robots",
+    "description": "Milagrow RoboJulia Humanoid Robot is Now available",
+    "image_url": "https://images.assettype.com/fortuneindia/2020-04/1d88b7e9-b36f-40b6-a572-00e8aab560a7/Humanoid_ELF__1_.png?rect=0,0,1200,675&w=480&h=270&q=60&fit=cover",
+    "sub_category": "Expos"
+  }
+]
