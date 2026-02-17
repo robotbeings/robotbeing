@@ -638,6 +638,25 @@ const pageContent = {
         ]
     },
 
+    'driverless': {
+        title: 'Driverless Cars',
+        subtitle: 'Autonomous vehicles for safe and efficient transportation.',
+        image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1200&q=80',
+        content: 'Experience the future of mobility with our fleet of autonomous vehicles. Designed for safety, efficiency, and comfort.',
+        itemsTitle: 'Our Fleet',
+        items: [],
+        sections: [
+            {
+                title: 'Key Features',
+                items: [
+                    { title: 'Level 4 Autonomy', desc: 'Fully autonomous driving in controlled areas.' },
+                    { title: 'Electric Powertrain', desc: 'Zero emissions for a greener future.' },
+                    { title: 'Advanced Safety', desc: 'Lidar, radar, and camera fusion for 360-degree awareness.' }
+                ]
+            }
+        ]
+    },
+
     // Category Roots (from Main Nav clicks)
     'products': {
         title: 'Advanced Robotics Portfolio',
@@ -758,7 +777,8 @@ function GenericPage() {
         'laptop': { category: 'Electronics Gadgets', subCategory: 'Laptop' },
         'robot-vacuum': { category: 'Essential', subCategory: 'Robot Vacuum Cleaner' },
         'robot-mop': { category: 'Essential', subCategory: 'Robot Mop' },
-        'kitchen-robot': { category: 'Essential', subCategory: 'Kitchen Cooking Robot' }
+        'kitchen-robot': { category: 'Essential', subCategory: 'Kitchen Cooking Robot' },
+        'driverless': { category: 'Driverless Car', subCategory: 'General' }
     };
 
     const getCurrentCategory = () => {
@@ -789,7 +809,7 @@ function GenericPage() {
 
         // Fetch CMS page content from database
         // setCmsLoading(true);
-        // fetch(`http://localhost:5000/api/pages/${slug}`)
+        // fetch(`${import.meta.env.VITE_API_URL}/api/pages/${slug}`)
         //     .then(res => {
         //         if (!res.ok) throw new Error('Page not found in CMS');
         //         return res.json();
@@ -811,7 +831,7 @@ function GenericPage() {
         const { category, subCategory } = getCurrentCategory();
         if (category) {
             setLoading(true);
-            fetch('http://localhost:5000/api/robots')
+            fetch(`${import.meta.env.VITE_API_URL}/api/robots`)
                 .then(res => res.json())
                 .then(data => {
                     // Filter by main category AND sub-category if specified

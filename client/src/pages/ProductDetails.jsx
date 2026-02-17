@@ -7,7 +7,7 @@ function ProductDetails() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/robots/${id}`)
+        fetch(`${import.meta.env.VITE_API_URL}/api/robots/${id}`)
             .then(res => res.json())
             .then(data => {
                 setRobot(data)

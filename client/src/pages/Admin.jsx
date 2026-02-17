@@ -47,7 +47,7 @@ function Admin({ onLogout }) {
     // =====================================================
 
     const fetchRobots = () => {
-        fetch('http://localhost:5000/api/robots')
+        fetch(`${import.meta.env.VITE_API_URL}/api/robots`)
             .then(res => res.json())
             .then(data => {
                 if (Array.isArray(data)) {
@@ -63,7 +63,7 @@ function Admin({ onLogout }) {
     const handleDeleteRobot = (id) => {
         if (!window.confirm("Are you sure?")) return
 
-        fetch(`http://localhost:5000/api/robots/${id}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/api/robots/${id}`, {
             method: 'DELETE',
             headers: { 'Authorization': `Bearer ${token}` }
         })
@@ -77,7 +77,7 @@ function Admin({ onLogout }) {
     const handleRobotSubmit = (e) => {
         e.preventDefault()
 
-        fetch('http://localhost:5000/api/robots', {
+        fetch(`${import.meta.env.VITE_API_URL}/api/robots`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

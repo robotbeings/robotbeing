@@ -6,7 +6,7 @@ function Home() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/robots')
+        fetch(`${import.meta.env.VITE_API_URL}/api/robots`)
             .then(res => res.json())
             .then(data => {
                 // Filter to show only 'Rental' items as requested

@@ -11,7 +11,7 @@ function AllProducts() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-        fetch('http://localhost:5000/api/robots')
+        fetch(`${import.meta.env.VITE_API_URL}/api/robots`)
             .then(res => {
                 if (!res.ok) throw new Error('Failed to fetch robots')
                 return res.json()
